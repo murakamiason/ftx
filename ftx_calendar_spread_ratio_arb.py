@@ -36,13 +36,10 @@ for s in symbol_list:
         elif i >= 1:
             df_exe_ftx = pd.concat([df_exe_ftx, pd.read_csv("executions_{}_{}_{}.csv".format(s, "ftx", date_list[i]), index_col = 0)])
 
-    # format standardization process(to convert format of FTX to Liquid)
     df_exe_ftx["ts"] = df_exe_ftx["time"].apply(lambda x : x[:19]).apply(lambda x : datetime.datetime.strptime(x, '%Y-%m-%dT%H:%M:%S')).apply(lambda x : x.timestamp())
     df_exe_ftx = df_exe_ftx.drop(["liquidation", "time"], axis = 1)
     df_exe_ftx = df_exe_ftx.rename(columns = {"size":"quantity", "side":"taker_side"})
     df_exe_ftx = df_exe_ftx.reindex(columns = ["ts", "id", "price", "quantity", "taker_side"])
-    # omit milliseconds
-    # df_exe_ftx["ts"] = df_exe_ftx["ts"].apply(lambda x : int(x))
     df_exe_ftx = df_exe_ftx.sort_values(by = "ts").reset_index(drop = True)
     exe_dict[s] = df_exe_ftx
     print(s)
