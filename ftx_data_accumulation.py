@@ -18,7 +18,7 @@ def location(depth=0):
 traded_symbol = Config().traded_symbol
 
 ftx = ccxt.ftx()
-# plesae note that you specify datetime in japan and it is converted to datetime in UCT
+# plesae note that you specify datetime in japan and it is converted to datetime in U
 time_unit = 10
 freq = 1/20
 milestone_percentage_unit = 0.001
