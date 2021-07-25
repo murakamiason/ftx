@@ -1,2 +1,6 @@
-# ftx
-code for trading in ftx
+# statistical_arb
+単純な統計的裁定取引。
+# ray_spot_futures_basis_arb
+ショートできない現物と、その先物の間の流動性の違いを利用した裁定取引。
+# calendar_spread_ratio_arb
+理論的裁定取引。現物と期限付き先物が２つ以上存在する場合、対象となる期限付き先物のイールドが一致するという想定のもとでバタフライを作る。
