@@ -1,4 +1,4 @@
 # ftx_trade_history.py
 指定した時刻から現在時刻までの約定履歴を取得して、保存する。
 # ftx_calendar_spread_ratio_arb.py
-ftx_trade_histrory.pyで取得したデータを用いて、戦略のバックテストを行う。戦略の詳細については、画像参照(description_1.jpg, description_2.jpg)。
+ftx_trade_histrory.pyで取得したデータを用いて、戦略のバックテストを行う。具体的な戦略としては、現物と満期の異なる２つの期限付き先物について、それらの期限付き先物のイールドが一致するという想定のもとで現物と先物２つでバタフライを作る。詳細については、画像参照(description_1.jpg, description_2.jpg)。
