@@ -141,9 +141,9 @@ def trades_reporter(url, buy_price, sell_price, buy_amount, sell_amount, entry_s
     res = requests.post(url, headers={'Content-Type': 'application/json'}, data = json.dumps(send_data))
     print(res.text)
 
-url = "https://hooks.slack.com/services/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"
+url = "url"
 
-ftx = MyFTX({"apiKey":"77TX2bATArG5dzPxkn4PrfP9GrjtD7jFvXcDeDap", "secret":"ifjiDUsBiaDyiDVBcxCYF6x8JwWk7mfgN9iEx6id"})
+ftx = MyFTX({"apiKey":"apiKey", "secret":"secret"})
 
 def location(depth=0):
   frame = inspect.currentframe().f_back
